@@ -46,6 +46,6 @@ tasks {
     }
 
     runIde{
-        ideDir.set(file("C:\\Program Files\\Android\\Android Studio"))
+        ideDir.set(file("/Applications/Android Studio.app/Contents"))
     }
 }

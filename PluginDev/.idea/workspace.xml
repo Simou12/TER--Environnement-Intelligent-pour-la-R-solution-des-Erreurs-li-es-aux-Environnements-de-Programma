@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be2c9fde-4101-4e8f-af3b-60fa5f009b95" name="Changes" comment="" />
+    <list default="true" id="be2c9fde-4101-4e8f-af3b-60fa5f009b95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plugindev/ManifestChangeListner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plugindev/ManifestChangeListner.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +81,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Yanis Bouallouche/Documents/GitHub/TER--Environnement-Intelligent-pour-la-R-solution-des-Erreurs-li-es-aux-Environnements-de-Programma/PluginDev"
+    "last_opened_file_path": "/Users/hadji/IdeaProjects/TER--Environnement-Intelligent-pour-la-R-solution-des-Erreurs-li-es-aux-Environnements-de-Programma/PluginDev",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,6 +99,7 @@
       <workItem from="1677588318863" duration="4569000" />
       <workItem from="1677676708254" duration="2310000" />
       <workItem from="1677679169745" duration="11000" />
+      <workItem from="1677765473333" duration="1488000" />
     </task>
     <servers />
   </component>
