@@ -25,7 +25,7 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <applicationListeners>
         <listener
-                class="com.example.plugindev.ManifestChangeListener"
+                class="com.ter.dev.listener.AppBulkFileListener"
                 topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
     </applicationListeners>
 </idea-plugin>
