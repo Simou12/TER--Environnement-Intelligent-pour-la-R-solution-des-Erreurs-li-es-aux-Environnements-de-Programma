@@ -4,18 +4,42 @@ import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.vfs.newvfs.BulkFileListener;
 import com.intellij.openapi.vfs.newvfs.events.VFileContentChangeEvent;
 import com.intellij.openapi.vfs.newvfs.events.VFileEvent;
+import name.fraser.neil.plaintext.diff_match_patch;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AppBulkFileListener implements BulkFileListener {
 
     private static final Logger LOGGER = Logger.getLogger(AppBulkFileListener.class.getSimpleName());
 
-    private final List<String> filesToWatch = List.of("AndroidManifest.xml");
-    private final Map<String, byte[]> oldContents = new LinkedHashMap<>();
+    private final Map<String, byte[]> oldContents;
+
+    private static diff_match_patch diffMatchPatch = new diff_match_patch();
+
+    public AppBulkFileListener() {
+        super();
+
+        this.oldContents = new LinkedHashMap<>();
+
+        try {
+                    FileHandler fileHandler = new FileHandler("myapp.log");
+            LOGGER.addHandler(fileHandler);
+
+            LOGGER.setLevel(Level.ALL);
+            fileHandler.setLevel(Level.ALL);
+
+            LOGGER.info("My first log message");
+            LOGGER.warning("My warning message");
+            LOGGER.severe("My severe message");
+        } catch (IOException e) {
+            LOGGER.log(Level.SEVERE, "Error creating log file", e);
+        }
+    }
 
     @Override
     public void after(@NotNull List<? extends @NotNull VFileEvent> events) {
@@ -53,33 +77,34 @@ public class AppBulkFileListener implements BulkFileListener {
     }
 
     private void logFileDiff(String filename, String oldContent, String newContent) {
-        String[] oldLines = oldContent.split("\n");
-        String[] newLines = newContent.split("\n");
 
-        int i = 0;
-        int j = 0;
-        while (i < oldLines.length && j < newLines.length) {
-            if (!oldLines[i].equals(newLines[j])) {
-                if (i < oldLines.length && j < newLines.length) {
-                    LOGGER.info(filename + "/Line " + (j + 1) + " added: " + newLines[j]);
-                    System.out.println(filename + "/Line " + (j + 1) + " added: " + newLines[j]);
-                } else if (i < oldLines.length) {
-                    LOGGER.info(filename + "/Line " + (i + 1) + " removed: " + oldLines[i]);
-                    System.out.println(filename + "/Line " + (i + 1) + " removed: " + oldLines[i]);
+        LinkedList<diff_match_patch.Diff> diff = diffMatchPatch.diff_main(oldContent, newContent);
+        diffMatchPatch.diff_cleanupSemantic(diff);
+
+        // Print the results
+        int lineNum = 0;
+
+        for (diff_match_patch.Diff d : diff) {
+            String[] lines = d.text.split("\n");
+            int numLines = lines.length;
+
+            if (d.operation == diff_match_patch.Operation.INSERT) {
+                System.out.println("INSERT : line " + (lineNum + 2) + ":");
+                for (int i = 0; i < numLines; i++) {
+                    System.out.println(lines[i]);
+                    //LOGGE
                 }
+                lineNum += numLines;
+            } else if (d.operation == diff_match_patch.Operation.DELETE) {
+                System.out.println("DELETE : line " + (lineNum + 2) + ":");
+                for (int i = 0; i < numLines; i++) {
+                    System.out.println(lines[i]);
+                }
+                lineNum -= numLines;
+            } else {
+                lineNum += numLines;
             }
-            i++;
-            j++;
-        }
-
-        // Print any remaining lines (if the file was truncated)
-        while (i < oldLines.length) {
-            System.out.println(filename + "/Line " + (i + 1) + " removed: " + oldLines[i]);
-            i++;
-        }
-        while (j < newLines.length) {
-            System.out.println(filename + "/Line " + (j + 1) + " added: " + newLines[j]);
-            j++;
         }
     }
+
 }

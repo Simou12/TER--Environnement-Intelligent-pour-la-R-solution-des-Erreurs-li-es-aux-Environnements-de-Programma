@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be2c9fde-4101-4e8f-af3b-60fa5f009b95" name="Changes" comment="">
+
       <change afterPath="$PROJECT_DIR$/src/main/java/com/ter/dev/listener/RunActionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plugindev/ManifestChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plugindev/ManifestChangeListener.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,17 +37,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PluginDev" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PluginDev" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -76,6 +72,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -101,6 +98,13 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ter.dev" />
     </key>
+
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -117,7 +121,14 @@
       <workItem from="1677676708254" duration="2310000" />
       <workItem from="1677679169745" duration="156000" />
       <workItem from="1677766867536" duration="70000" />
+
       <workItem from="1677779223424" duration="1860000" />
+      <workItem from="1677770654276" duration="2585000" />
+      <workItem from="1677774397637" duration="7806000" />
+      <workItem from="1678376249808" duration="933000" />
+      <workItem from="1678378168105" duration="848000" />
+      <workItem from="1678385322669" duration="29000" />
+
     </task>
     <servers />
   </component>
