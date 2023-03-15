@@ -29,7 +29,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class Pluggin implements ApplicationComponent {
+public class Plugin implements ApplicationComponent {
 
     public void initComponent() {
         Project[] projects = ProjectManager.getInstance().getOpenProjects();
