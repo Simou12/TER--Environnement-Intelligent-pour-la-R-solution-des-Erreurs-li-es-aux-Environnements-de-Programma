@@ -25,8 +25,7 @@ public class AddFileListener implements BulkFileListener {
                 if(event instanceof VFileCreateEvent){
                     System.out.println("file created path : "+event.getPath());
 
-                }
-                if(event instanceof VFileDeleteEvent){
+                }else if(event instanceof VFileDeleteEvent){
                     System.out.println("file suppressed path : "+event.getPath());
                 }
             }
