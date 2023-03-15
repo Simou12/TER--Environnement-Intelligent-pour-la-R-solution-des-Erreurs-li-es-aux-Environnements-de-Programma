@@ -1,1 +1,1 @@
-
+ApplicationComponent pour les pluggins
