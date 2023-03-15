@@ -22,11 +22,10 @@ public class AddFileListener implements BulkFileListener {
     }
     public void after(@NotNull List<? extends VFileEvent> events){
             for (VFileEvent event:events){
-                if(event instanceof VFileCreateEvent){
-                    System.out.println("file created path : "+event.getPath());
+                if(event instanceof VFileCreateEvent) {
+                    System.out.println("file created path : " + event.getPath());
 
-                }
-                if(event instanceof VFileDeleteEvent){
+                }else if(event instanceof VFileDeleteEvent){
                     System.out.println("file suppressed path : "+event.getPath());
                 }
             }
