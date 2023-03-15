@@ -35,7 +35,7 @@ public class Pluggin implements ApplicationComponent {
         Project[] projects = ProjectManager.getInstance().getOpenProjects();
        /* for (Project project : projects) {
             // Enregistre le listener pour chaque projet
-            VirtualFileManager.getInstance().addBulkFileListener(new AddFileListener(project), project);
+     
         }*/
     }
 
