@@ -59,7 +59,6 @@ public class VirtualFileComparator {
                 if(oldTextList.size() <= current){
                     oldString = "";
                     newString = newTextList.get(current);
-
                 } else if (newTextList.size() <= current){
                     oldString = oldTextList.get(current);
                     newString = "";
