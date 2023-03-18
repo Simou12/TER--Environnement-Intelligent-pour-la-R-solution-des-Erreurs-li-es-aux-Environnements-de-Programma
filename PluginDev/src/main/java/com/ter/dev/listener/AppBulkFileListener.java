@@ -27,7 +27,7 @@ public class AppBulkFileListener implements BulkFileListener {
         this.oldContents = new LinkedHashMap<>();
 
         try {
-                    FileHandler fileHandler = new FileHandler("myapp.log");
+            FileHandler fileHandler = new FileHandler("myapp.log");
             LOGGER.addHandler(fileHandler);
 
             LOGGER.setLevel(Level.ALL);
@@ -36,6 +36,7 @@ public class AppBulkFileListener implements BulkFileListener {
             LOGGER.info("My first log message");
             LOGGER.warning("My warning message");
             LOGGER.severe("My severe message");
+
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "Error creating log file", e);
         }
@@ -89,22 +90,23 @@ public class AppBulkFileListener implements BulkFileListener {
             int numLines = lines.length;
 
             if (d.operation == diff_match_patch.Operation.INSERT) {
-                System.out.println("INSERT : line " + (lineNum + 2) + ":");
-                for (int i = 0; i < numLines; i++) {
-                    System.out.println(lines[i]);
-                    //LOGGE
-                }
+
+                System.out.print("INSERT/" + filename + ":" + (lineNum + 2) + ":");
+                for (String line : lines)
+                    System.out.println(line);
+
                 lineNum += numLines;
             } else if (d.operation == diff_match_patch.Operation.DELETE) {
-                System.out.println("DELETE : line " + (lineNum + 2) + ":");
-                for (int i = 0; i < numLines; i++) {
-                    System.out.println(lines[i]);
-                }
+                System.out.println("DELETE/" + filename + ":" + (lineNum + 2) + ":");
+                for (String line : lines)
+                    System.out.println(line);
+
                 lineNum -= numLines;
             } else {
                 lineNum += numLines;
             }
         }
     }
+
 
 }

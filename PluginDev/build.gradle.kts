@@ -51,6 +51,6 @@ tasks {
     }
 
     runIde{
-        ideDir.set(file("/snap/android-studio/current/android-studio"))
+        ideDir.set(file("/Users/hadji/Library/Application Support/JetBrains/Toolbox/apps/AndroidStudio/ch-0/221.6008.13.2211.9477386/Android Studio.app/Contents"))
     }
 }
