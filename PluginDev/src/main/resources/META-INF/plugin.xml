@@ -25,9 +25,6 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <applicationListeners>
-        <listener
-                class="add_delete_fileListener.AddDeleteFileListener"
-                topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
 
         <listener
                 class="com.ter.dev.listener.RunActionListener"
